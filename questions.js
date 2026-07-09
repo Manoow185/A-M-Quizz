@@ -16,14 +16,9 @@
    catégorie voulue et remplace le contenu. Aucune limite de taille.
    ============================================================ */
 
-/* NOTE (fix) : quand "Petit Bac" est sélectionné seul (sans autre catégorie),
-   on peut piocher jusqu'au nombre de questions demandé (et non plafonné à 3),
-   sinon il reste un "round" limité mélangé aux autres catégories. Voir app.js. */
 const QUESTION_BANK = {
 
   /* ================= ANIMAUX (à deviner) ================= */
-  // Affichées via un gros emoji (fiable, pas de lien image cassé).
-  // Remplace "image" par une vraie URL de photo si tu veux.
   animaux: [
     { prompt: "Quel est cet animal ?", image: "https://cdn-images.zoobeauval.com/pTsc7axkqY3t5MzSk0WS5C3K7Ig=/730x730/https%3A%2F%2Fs3.eu-west-3.amazonaws.com%2Fimages.zoobeauval.com%2F2024%2F02%2Fgirafe-02-65ccbbb1cfc0b.jpg", reference: "Girafe" },
     { prompt: "Quel est cet animal ?", image: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Lion_d%27Afrique.jpg", reference: "Lion" },
@@ -74,8 +69,6 @@ const QUESTION_BANK = {
   ],
 
   /* ================= PETIT BAC ================= */
-  // Pas de "bonne réponse" unique : "reference" = exemples pour l'hôte.
-  // Catégories du round personnalisables. 8 minimum demandés, 15 fournis.
   petit_bac: [
     { letter: "G", categories: ["Animal", "Célébrité", "Pays", "Prénom", "Métier", "Objet"],
       reference: { Animal: "Girafe", Célébrité: "Gyökeres", Pays: "Grèce", Prénom: "Gabriel", Métier: "Garagiste", Objet: "Gant" } },
@@ -178,6 +171,32 @@ const QUESTION_BANK = {
     { prompt: "Quel traité de 1648 met fin à la guerre de Trente Ans ?", reference: "La paix de Westphalie" },
     { prompt: "Quelle civilisation antique a inventé la démocratie ?", reference: "Les Grecs (Athènes)" },
     { prompt: "Quel dirigeant chinois fonde la République populaire de Chine en 1949 ?", reference: "Mao Zedong" },
+    // AJOUTS ICI
+    { prompt: "Quelle est la plus ancienne civilisation de la Mésopotamie ?", reference: "Les Sumériens" },
+    { prompt: "Qui a découvert le vaccin contre la rage ?", reference: "Louis Pasteur" },
+    { prompt: "En quelle année l'Algérie a-t-elle obtenu son indépendance ?", reference: "1962" },
+    { prompt: "Quel président américain a aboli l'esclavage ?", reference: "Abraham Lincoln" },
+    { prompt: "Quelle guerre a opposé la France et l'Angleterre de 1337 à 1453 ?", reference: "La guerre de Cent Ans" },
+    { prompt: "Qui a unifié la Chine pour la première fois ?", reference: "Qin Shi Huang" },
+    { prompt: "En quelle année a eu lieu le massacre de la Saint-Barthélemy ?", reference: "1572" },
+    { prompt: "Quel roi de France a été surnommé « Le Juste » ?", reference: "Louis XIII" },
+    { prompt: "Quelle bataille navale a opposé la flotte franco-espagnole à la flotte britannique en 1805 ?", reference: "La bataille de Trafalgar" },
+    { prompt: "Qui était le dernier tsar de Russie ?", reference: "Nicolas II" },
+    { prompt: "En quelle année a été signée la Déclaration des droits de l'homme et du citoyen ?", reference: "1789" },
+    { prompt: "Quel pays a été divisé par le 38e parallèle après la Seconde Guerre mondiale ?", reference: "La Corée" },
+    { prompt: "Qui a été le premier président de la République française (1848) ?", reference: "Louis-Napoléon Bonaparte (Napoléon III)" },
+    { prompt: "Quelle cité a été détruite par l'éruption du Vésuve en 79 apr. J.-C. ?", reference: "Pompéi" },
+    { prompt: "Quel empereur byzantin a fait construire la basilique Sainte-Sophie ?", reference: "Justinien" },
+    { prompt: "Quelle reine d'Angleterre a régné pendant 63 ans, de 1837 à 1901 ?", reference: "La reine Victoria" },
+    { prompt: "Quel révolutionnaire cubain a renversé Batista en 1959 ?", reference: "Fidel Castro" },
+    { prompt: "En quelle année la loi de séparation des Églises et de l'État a-t-elle été adoptée en France ?", reference: "1905" },
+    { prompt: "Quel célèbre conquérant a fondé le plus vaste empire continu de l'histoire, l'Empire mongol ?", reference: "Gengis Khan" },
+    { prompt: "Qui a écrit le Manifeste du Parti communiste avec Friedrich Engels ?", reference: "Karl Marx" },
+    { prompt: "Quel traité a officiellement créé l'Union européenne en 1992 ?", reference: "Le traité de Maastricht" },
+    { prompt: "Quel navigateur portugais fut le premier à atteindre l'Inde par la voie maritime ?", reference: "Vasco de Gama" },
+    { prompt: "Sous quelle République la France vit-elle actuellement ?", reference: "La Ve République" },
+    { prompt: "Quelle célèbre figure de la Révolution française a été assassinée dans sa baignoire par Charlotte Corday ?", reference: "Jean-Paul Marat" },
+    { prompt: "En quelle année Neil Armstrong a-t-il marché sur la Lune ?", reference: "1969" },
   ],
 
   /* ================= GRANDES FIGURES & ÉVÉNEMENTS ================= */
@@ -222,6 +241,32 @@ const QUESTION_BANK = {
     { prompt: "Qui est cette figure reconnu chez Acacio's Family ?", image: "https://i.postimg.cc/y3JyCy6h/deloeil.jpg", reference: "Tyméo/Deloeil" },
     { prompt: "Qui est cette figure reconnu chez Acacio's Family ?", image: "https://i.postimg.cc/xNk3V3jv/Maxime.png", reference: "Tiropijon" },
     { prompt: "Qui est cette figure reconnu chez Acacio's Family ?", image: "https://i.postimg.cc/MfcmJmZs/Simon.png", reference: "Simon" },
+    // AJOUTS ICI
+    { prompt: "Je suis un grand peintre et inventeur de la Renaissance, auteur de La Joconde. Qui suis-je ?", reference: "Léonard de Vinci" },
+    { prompt: "Je suis l'auteur du célèbre roman français Les Misérables. Qui suis-je ?", reference: "Victor Hugo" },
+    { prompt: "Je suis une militante noire américaine célèbre pour avoir refusé de céder ma place dans un bus en 1955. Qui suis-je ?", reference: "Rosa Parks" },
+    { prompt: "Je suis un scientifique britannique qui a formulé la théorie de l'évolution des espèces. Qui suis-je ?", reference: "Charles Darwin" },
+    { prompt: "Je suis un boxeur légendaire américain, initialement nommé Cassius Clay, surnommé « The Greatest ». Qui suis-je ?", reference: "Muhammad Ali" },
+    { prompt: "Je suis une reine d'Écosse exécutée sur ordre de ma cousine Élisabeth Ire. Qui suis-je ?", reference: "Marie Stuart" },
+    { prompt: "Je suis le plus célèbre auteur dramatique français, créateur de L'Avare et du Tartuffe. Qui suis-je ?", reference: "Molière" },
+    { prompt: "Je suis l'actuelle princesse de Galles et future reine consort du Royaume-Uni. Qui suis-je ?", reference: "Kate Middleton" },
+    { prompt: "Je suis une figure centrale de la Révolution française, instigateur de la Terreur, surnommé « L'Incorruptible ». Qui suis-je ?", reference: "Maximilien de Robespierre" },
+    { prompt: "Je suis un mathématicien britannique considéré comme le père de l'informatique, célèbre pour avoir déchiffré la machine Enigma. Qui suis-je ?", reference: "Alan Turing" },
+    { prompt: "Je suis une cosmonaute soviétique, la première femme à avoir effectué un vol dans l'espace en 1963. Qui suis-je ?", reference: "Valentina Terechkova" },
+    { prompt: "Je suis une militante pakistanaise pour l'éducation des filles, devenue la plus jeune lauréate du prix Nobel de la paix. Qui suis-je ?", reference: "Malala Yousafzai" },
+    { prompt: "Je suis l'homme d'affaires américain cofondateur de la marque Apple. Qui suis-je ?", reference: "Steve Jobs" },
+    { prompt: "Je suis un physicien britannique connu pour mes travaux sur les trous noirs et mon best-seller « Une brève histoire du temps ». Qui suis-je ?", reference: "Stephen Hawking" },
+    { prompt: "Je suis une artiste peintre mexicaine reconnue pour mes autoportraits intenses et colorés. Qui suis-je ?", reference: "Frida Kahlo" },
+    { prompt: "Je suis le compositeur autrichien prodige auteur de La Flûte enchantée. Qui suis-je ?", reference: "Wolfgang Amadeus Mozart" },
+    { prompt: "Je suis un industriel américain qui a popularisé le travail à la chaîne avec mon modèle T. Qui suis-je ?", reference: "Henry Ford" },
+    { prompt: "Je suis un célèbre trompettiste de jazz, surnommé Satchmo. Qui suis-je ?", reference: "Louis Armstrong" },
+    { prompt: "Je suis l'ingénieur français qui a construit la grande tour métallique de Paris pour l'Exposition universelle de 1889. Qui suis-je ?", reference: "Gustave Eiffel" },
+    { prompt: "Je suis le chef spirituel tibétain exilé, récompensé par le prix Nobel de la paix en 1989. Qui suis-je ?", reference: "Le Dalaï-Lama" },
+    { prompt: "Je suis le pionnier américain de l'animation, créateur du personnage de Mickey Mouse. Qui suis-je ?", reference: "Walt Disney" },
+    { prompt: "Je suis l'écrivaine britannique mondialement connue pour avoir créé la saga littéraire Harry Potter. Qui suis-je ?", reference: "J.K. Rowling" },
+    { prompt: "Je suis le leader sud-africain de la lutte contre l'apartheid et devenu le premier président noir du pays. Qui suis-je ?", reference: "Nelson Mandela" },
+    { prompt: "Je suis une sainte catholique albanaise qui a consacré sa vie aux pauvres dans les bidonvilles de Calcutta. Qui suis-je ?", reference: "Mère Teresa" },
+    { prompt: "Je suis l'astronaute français, devenu très populaire, ayant séjourné deux fois dans la Station spatiale internationale. Qui suis-je ?", reference: "Thomas Pesquet" },
   ],
 
   /* ================= FRANÇAIS ================= */
@@ -266,6 +311,32 @@ const QUESTION_BANK = {
     { prompt: "Quel est le pluriel de « travail » ?", reference: "Travaux" },
     { prompt: "Comment appelle-t-on une exagération volontaire (« Je meurs de faim ») ?", reference: "Une hyperbole" },
     { prompt: "Quel est l'antonyme de « ouvrir » ?", reference: "Fermer" },
+    // AJOUTS ICI
+    { prompt: "Donnez un synonyme courant du mot « Vacarme ».", reference: "Bruit, chahut, tapage" },
+    { prompt: "Comment s'appelle le temps du passé exprimant une action qui s'est déroulée avant une autre action passée ?", reference: "Le plus-que-parfait" },
+    { prompt: "Quel est le féminin de « jumeau » ?", reference: "Jumelle" },
+    { prompt: "Complétez le célèbre proverbe : « Pierre qui roule n'amasse pas... »", reference: "Mousse" },
+    { prompt: "Quel est le pluriel du mot « chacal » ?", reference: "Chacals (avec un S, c'est une exception)" },
+    { prompt: "Comment appelle-t-on un mot dont la prononciation imite le bruit de la chose qu'il désigne (ex : tic-tac, boum) ?", reference: "Une onomatopée" },
+    { prompt: "Quel est l'infinitif du verbe conjugué dans la phrase : « Nous fûmes ravis » ?", reference: "Être (au passé simple)" },
+    { prompt: "Quelle figure de style consiste à attribuer des caractéristiques humaines à un objet ou un animal ?", reference: "La personnification" },
+    { prompt: "Quel est l'antonyme de « éphémère » ?", reference: "Durable, éternel, pérenne" },
+    { prompt: "Comment écrit-on le mot composé « chef-d'œuvre » au pluriel ?", reference: "Chefs-d'œuvre" },
+    { prompt: "Quelle est la fonction grammaticale du mot « rouge » dans l'expression « La voiture rouge » ?", reference: "Épithète (liée au nom voiture)" },
+    { prompt: "Conjuguez le verbe « avoir » à l'imparfait du subjonctif, à la 1ère personne du singulier.", reference: "Que j'eusse" },
+    { prompt: "Quel est le participe passé du verbe « mourir » ?", reference: "Mort" },
+    { prompt: "Quelle figure de style rapproche deux mots de sens contraire au sein d'une même expression (ex: un silence assourdissant) ?", reference: "Un oxymore" },
+    { prompt: "Quel est le pluriel du mot « vitrail » ?", reference: "Vitraux" },
+    { prompt: "Comment appelle-t-on un mot ou un groupe de mots qui peut se lire de gauche à droite ou de droite à gauche avec le même sens (ex: kayak, radar) ?", reference: "Un palindrome" },
+    { prompt: "Quel est l'antonyme (moment de la journée) de « crépuscule » ?", reference: "Aube, aurore" },
+    { prompt: "Complétez cette expression française signifiant avoir un défaut de prononciation : « Avoir un cheveu sur la... »", reference: "Langue" },
+    { prompt: "Quel est le féminin de l'adjectif « vieux » ?", reference: "Vieille" },
+    { prompt: "Quels pronoms personnels sont utilisés pour remplacer un COD inanimé (ou animé) défini ?", reference: "Le, la, les, l'" },
+    { prompt: "Quel mode verbal est traditionnellement utilisé en français pour exprimer le doute, la volonté ou le souhait ?", reference: "Le subjonctif" },
+    { prompt: "Quel est le synonyme soutenu de « généreux » signifiant qu'on aime donner sans compter ?", reference: "Altruiste, prodigue, charitable" },
+    { prompt: "Dans la phrase « Il y a deux cents personnes », comment écrit-on cent au pluriel ?", reference: "Cents (avec un S, car il est multiplié et termine le nombre)" },
+    { prompt: "Quelle est la nature du mot « lentement » ?", reference: "Un adverbe" },
+    { prompt: "Comment s'appelle la branche de la linguistique qui étudie les sons de la langue ?", reference: "La phonétique" },
   ],
 
   /* ================= MARQUES & ENTREPRISES (par indices) ================= */
@@ -297,7 +368,7 @@ const QUESTION_BANK = {
     { prompt: "Quel est cette marque ?", image: "https://decoglam.net/storage/images/image?remote=https%3A%2F%2Fdecoglam.net%2FWebRoot%2FStore20%2FShops%2F57b2465e-10e3-4ede-a8d1-6ede59d24921%2F6161%2F52F8%2F7F2C%2F2C42%2F6FC0%2F0A48%2F356B%2FBFA3%2Fhermes-paris.jpg&shop=57b2465e-10e3-4ede-a8d1-6ede59d24921", reference: "Hermès" },
     { prompt: "Quel est cette marque ?", image: "https://www.numerama.com/content/uploads/2016/06/13502130_10153696123838870_522765110773053650_n-796x796-2.png", reference: "Netflix" },
     { prompt: "Quel est cette marque ?", image: "https://cdn.worldvectorlogo.com/logos/michelin-2.svg", reference: "Michelin" },
-    { prompt: "Quel est cette marque ?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/3840px-Microsoft_logo.svg.png", reference: "Microsoft (pas Domino's pizza" },
+    { prompt: "Quel est cette marque ?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/3840px-Microsoft_logo.svg.png", reference: "Microsoft (pas Domino's pizza)" },
     { prompt: "Quel est cette marque ?", image: "https://embroideres.com/files/cache/042a7c76b4c950dc1882acfc97f5cf25_f1000671.jpg", reference: "KFC" },
     { prompt: "Quel est cette marque ?", image: "https://logos-marques.com/wp-content/uploads/2021/02/Logo-Tesla.jpg", reference: "Tesla" },
     { prompt: "Quel est cette marque ?", image: "https://logos-marques.com/wp-content/uploads/2020/04/Chanel-Symbole.jpg", reference: "Chanel" },
@@ -361,6 +432,32 @@ const QUESTION_BANK = {
     { prompt: "Combien de minutes dure un match de basketball NBA hors prolongations ?", reference: "48 minutes" },
     { prompt: "Quel est le nom de la galaxie qui contient notre système solaire ?", reference: "La Voie lactée" },
     { prompt: "Quelle est la capitale de la Chine ?", reference: "Pékin" },
+    // AJOUTS ICI
+    { prompt: "Quel est le plus petit pays du monde ?", reference: "Le Vatican" },
+    { prompt: "Dans quel pays se trouve le célèbre site inca du Machu Picchu ?", reference: "Le Pérou" },
+    { prompt: "Quelle est la véritable capitale de l'Australie (et non Sydney) ?", reference: "Canberra" },
+    { prompt: "Quel est le sommet le plus haut du monde par rapport au niveau de la mer ?", reference: "L'Everest" },
+    { prompt: "Quel célèbre peintre espagnol a réalisé la toile « Guernica » ?", reference: "Pablo Picasso" },
+    { prompt: "Quel est le sport le plus pratiqué et regardé au monde ?", reference: "Le football" },
+    { prompt: "Quel fruit est l'ingrédient principal de la recette du guacamole mexicain ?", reference: "L'avocat" },
+    { prompt: "Quelle est la monnaie officielle de la Suisse ?", reference: "Le franc suisse" },
+    { prompt: "Quelle mer s'étend entre la Grèce à l'ouest et la Turquie à l'est ?", reference: "La mer Égée" },
+    { prompt: "Quelle est la plus grande planète de notre système solaire ?", reference: "Jupiter" },
+    { prompt: "Quel animal marsupial est un grand symbole de l'Australie, en plus du kangourou ?", reference: "Le koala (ou l'émeu)" },
+    { prompt: "Quelle célèbre ville américaine est mondialement surnommée « La Grosse Pomme » (The Big Apple) ?", reference: "New York" },
+    { prompt: "Quel élément chimique essentiel à la vie porte le symbole O ?", reference: "L'oxygène" },
+    { prompt: "Quelle saga cinématographique met en scène le sorcier surnommé « L'Élu » portant une cicatrice en éclair ?", reference: "Harry Potter" },
+    { prompt: "Quel pays a dépassé la Chine pour devenir le plus peuplé du monde ?", reference: "L'Inde" },
+    { prompt: "Quel petit fruit rouge est utilisé pour fabriquer la liqueur appelée kirsch ?", reference: "La cerise" },
+    { prompt: "Quel océan borde toute la côte Est des États-Unis ?", reference: "L'océan Atlantique" },
+    { prompt: "En astronomie, comment appelle-t-on le phénomène d'une étoile massive qui explose ?", reference: "Une supernova" },
+    { prompt: "Quel instrument de musique à cordes est indissociable de la danse et musique du flamenco ?", reference: "La guitare (flamenca)" },
+    { prompt: "Dans quel célèbre jeu vidéo explore-t-on la région de Bordeciel (Skyrim) sur le continent de Tamriel ?", reference: "The Elder Scrolls (V: Skyrim)" },
+    { prompt: "Quelle est la langue officielle du Brésil ?", reference: "Le portugais" },
+    { prompt: "De quel pays européen les célèbres briques de construction Lego sont-elles originaires ?", reference: "Le Danemark" },
+    { prompt: "Quelle est la capitale du Canada ?", reference: "Ottawa" },
+    { prompt: "Quelle est la couleur du légendaire cheval blanc d'Henri IV ?", reference: "Blanc" },
+    { prompt: "Quel fleuve d'Amérique du Sud est considéré par la plupart des géographes modernes comme le plus long et le plus puissant du monde ?", reference: "L'Amazone" },
   ],
 };
 
@@ -378,3 +475,5 @@ const CATEGORY_LABELS = {
 // Rend la banque accessible en tant que module (utilisée par app.js)
 if (typeof module !== 'undefined') { module.exports = QUESTION_BANK; }
 if (typeof window !== 'undefined') { window.QUESTION_BANK = QUESTION_BANK; window.CATEGORY_LABELS = CATEGORY_LABELS; }
+
+```
