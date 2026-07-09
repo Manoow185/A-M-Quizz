@@ -151,8 +151,22 @@ button.cta.ghost:hover{ background: var(--surface-2); opacity:0.85; }
   letter-spacing: 1.2px; color: var(--accent-2); margin-bottom: 10px; display:block;
 }
 .question-text{ font-size: 20px; font-weight: 600; line-height: 1.4; }
-.question-image{ font-size: 68px; text-align:center; margin: 16px 0; }
+.question-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:16px 0;
+}
 
+.question-image img{
+    width:100%;
+    max-width:420px;
+    max-height:280px;
+    object-fit:contain;
+
+    border-radius:14px;
+    border:1px solid var(--border);
+}
 .petit-bac-letter{
   font-family:'Space Grotesk', sans-serif; font-size: 52px; font-weight: 700;
   background: var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
