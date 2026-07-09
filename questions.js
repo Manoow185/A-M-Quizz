@@ -17,7 +17,7 @@
    ============================================================ */
 
 const QUESTION_BANK = {
-
+   
   /* ================= ANIMAUX (à deviner) ================= */
   animaux: [
     { prompt: "Quel est cet animal ?", image: "https://cdn-images.zoobeauval.com/pTsc7axkqY3t5MzSk0WS5C3K7Ig=/730x730/https%3A%2F%2Fs3.eu-west-3.amazonaws.com%2Fimages.zoobeauval.com%2F2024%2F02%2Fgirafe-02-65ccbbb1cfc0b.jpg", reference: "Girafe" },
@@ -171,7 +171,6 @@ const QUESTION_BANK = {
     { prompt: "Quel traité de 1648 met fin à la guerre de Trente Ans ?", reference: "La paix de Westphalie" },
     { prompt: "Quelle civilisation antique a inventé la démocratie ?", reference: "Les Grecs (Athènes)" },
     { prompt: "Quel dirigeant chinois fonde la République populaire de Chine en 1949 ?", reference: "Mao Zedong" },
-    // AJOUTS ICI
     { prompt: "Quelle est la plus ancienne civilisation de la Mésopotamie ?", reference: "Les Sumériens" },
     { prompt: "Qui a découvert le vaccin contre la rage ?", reference: "Louis Pasteur" },
     { prompt: "En quelle année l'Algérie a-t-elle obtenu son indépendance ?", reference: "1962" },
@@ -241,7 +240,6 @@ const QUESTION_BANK = {
     { prompt: "Qui est cette figure reconnu chez Acacio's Family ?", image: "https://i.postimg.cc/y3JyCy6h/deloeil.jpg", reference: "Tyméo/Deloeil" },
     { prompt: "Qui est cette figure reconnu chez Acacio's Family ?", image: "https://i.postimg.cc/xNk3V3jv/Maxime.png", reference: "Tiropijon" },
     { prompt: "Qui est cette figure reconnu chez Acacio's Family ?", image: "https://i.postimg.cc/MfcmJmZs/Simon.png", reference: "Simon" },
-    // AJOUTS ICI
     { prompt: "Je suis un grand peintre et inventeur de la Renaissance, auteur de La Joconde. Qui suis-je ?", reference: "Léonard de Vinci" },
     { prompt: "Je suis l'auteur du célèbre roman français Les Misérables. Qui suis-je ?", reference: "Victor Hugo" },
     { prompt: "Je suis une militante noire américaine célèbre pour avoir refusé de céder ma place dans un bus en 1955. Qui suis-je ?", reference: "Rosa Parks" },
@@ -311,7 +309,6 @@ const QUESTION_BANK = {
     { prompt: "Quel est le pluriel de « travail » ?", reference: "Travaux" },
     { prompt: "Comment appelle-t-on une exagération volontaire (« Je meurs de faim ») ?", reference: "Une hyperbole" },
     { prompt: "Quel est l'antonyme de « ouvrir » ?", reference: "Fermer" },
-    // AJOUTS ICI
     { prompt: "Donnez un synonyme courant du mot « Vacarme ».", reference: "Bruit, chahut, tapage" },
     { prompt: "Comment s'appelle le temps du passé exprimant une action qui s'est déroulée avant une autre action passée ?", reference: "Le plus-que-parfait" },
     { prompt: "Quel est le féminin de « jumeau » ?", reference: "Jumelle" },
@@ -432,7 +429,6 @@ const QUESTION_BANK = {
     { prompt: "Combien de minutes dure un match de basketball NBA hors prolongations ?", reference: "48 minutes" },
     { prompt: "Quel est le nom de la galaxie qui contient notre système solaire ?", reference: "La Voie lactée" },
     { prompt: "Quelle est la capitale de la Chine ?", reference: "Pékin" },
-    // AJOUTS ICI
     { prompt: "Quel est le plus petit pays du monde ?", reference: "Le Vatican" },
     { prompt: "Dans quel pays se trouve le célèbre site inca du Machu Picchu ?", reference: "Le Pérou" },
     { prompt: "Quelle est la véritable capitale de l'Australie (et non Sydney) ?", reference: "Canberra" },
@@ -475,5 +471,3 @@ const CATEGORY_LABELS = {
 // Rend la banque accessible en tant que module (utilisée par app.js)
 if (typeof module !== 'undefined') { module.exports = QUESTION_BANK; }
 if (typeof window !== 'undefined') { window.QUESTION_BANK = QUESTION_BANK; window.CATEGORY_LABELS = CATEGORY_LABELS; }
-
-```
