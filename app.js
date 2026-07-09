@@ -358,7 +358,7 @@ async function submitAnswer(text, hintElId){
       judged: false, correct: null, judgedAt: null, updatedAt: Date.now(),
     }, { merge: true });
     const hint = document.getElementById(hintElId);
-    if(hint){ hint.style.display = 'block'; hint.textContent = "Réponse enregistrée — tu peux encore la modifier tant que le temps n'est pas écoulé."; hint.style.color = ''; }
+    if(hint){ hint.style.display = 'block'; hint.textContent = "Réponse enregistrée"; hint.style.color = ''; }
   } catch(e){
     console.error(e);
     const hint = document.getElementById(hintElId);
