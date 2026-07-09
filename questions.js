@@ -182,7 +182,6 @@ const QUESTION_BANK = {
 
   /* ================= GRANDES FIGURES & ÉVÉNEMENTS ================= */
   grandes_figures: [
-    { prompt: "Je suis un général corse devenu empereur des Français. Qui suis-je ?", reference: "Napoléon Bonaparte" },
     { prompt: "Je suis une jeune paysanne qui a mené l'armée française à Orléans avant d'être brûlée vive. Qui suis-je ?", reference: "Jeanne d'Arc" },
     { prompt: "Je suis un physicien qui a formulé la théorie de la relativité. Qui suis-je ?", reference: "Albert Einstein" },
     { prompt: "Je suis un pasteur américain qui a prononcé le discours « I have a dream ». Qui suis-je ?", reference: "Martin Luther King" },
@@ -197,7 +196,6 @@ const QUESTION_BANK = {
     { prompt: "Je suis un navigateur qui a atteint l'Amérique en 1492 en cherchant une route vers les Indes. Qui suis-je ?", reference: "Christophe Colomb" },
     { prompt: "Je suis une résistante et ministre française, rescapée des camps, dont le visage est sur les manuels d'histoire. Qui suis-je ?", reference: "Simone Veil" },
     { prompt: "Je suis un philosophe grec, maître de Platon devenu maître d'Aristote lui-même. Qui suis-je ?", reference: "Socrate" },
-    { prompt: "Je suis un empereur français vaincu définitivement à Waterloo en 1815. Qui suis-je ?", reference: "Napoléon Bonaparte" },
     { prompt: "Je suis un leader indien qui a mené la résistance non-violente contre la colonisation britannique. Qui suis-je ?", reference: "Gandhi" },
     { prompt: "Je suis un tsar russe qui a modernisé la Russie et fondé Saint-Pétersbourg. Qui suis-je ?", reference: "Pierre le Grand" },
     { prompt: "Je suis une figure de la Résistance française, chargé par de Gaulle d'unifier les mouvements clandestins. Qui suis-je ?", reference: "Jean Moulin" },
