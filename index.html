@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A&M Quizz — Multijoueur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body oncontextmenu="return false;">
+
+<div id="app">
+  <header class="brand">
+    <div class="logo">A<span>&</span>M Quizz</div>
+    <div class="code-badge mono" id="lobby-code-badge" style="display:none;">----</div>
+  </header>
+
+  <section id="screen-home" class="screen active">
+    <p class="hero-line" id="welcome-msg">Bienvenue ! Crée une partie ou rejoins tes amis.</p>
+
+    <div class="tabs-home">
+      <div class="tab active" data-tab="create">Créer une partie</div>
+      <div class="tab" data-tab="join">Rejoindre</div>
+    </div>
+
+    <div id="tab-create" class="card glass">
+      <div class="field">
+        <label>Ton prénom</label>
+        <input type="text" id="create-name" maxlength="20" placeholder="Ex: Alex">
+      </div>
+      <button class="cta" id="create-btn">Créer la partie</button>
+    </div>
+
+    <div id="tab-join" class="card glass" style="display:none;">
+      <div class="field">
+        <label>Ton prénom</label>
+        <input type="text" id="join-name" maxlength="20" placeholder="Ex: Alex">
+      </div>
+      <div class="field">
+        <label>Code de la partie</label>
+        <input type="text" id="join-code" maxlength="4" placeholder="Ex: RQTZ" style="text-transform:uppercase;">
+      </div>
+      <button class="cta" id="join-btn">Rejoindre la partie</button>
+    </div>
+
+    <div class="error-msg" id="home-error"></div>
+  </section>
+
+  <section id="screen-lobby" class="screen">
+    <p class="hero-line">Partage le code affiché en haut à tes amis pour qu'ils rejoignent.</p>
+
+    <div class="section-label">Joueurs connectés</div>
+    <div class="player-list" id="lobby-players"></div>
+
+    <div id="host-controls" style="display:none;">
+      <div class="section-label">Catégories</div>
+      <div class="cat-grid" id="lobby-cat-grid"></div>
+
+      <div class="card glass" style="margin-bottom:18px;">
+        <div class="field" style="margin-bottom:14px;">
+          <label>Nombre de questions (10 à 50)</label>
+          <input type="range" id="num-questions" min="10" max="50" step="1" value="25">
+          <div class="mono" style="text-align:center; margin-top:6px; color:var(--accent-2); font-weight:700;" id="num-questions-value">25</div>
+        </div>
+
+        <div class="field" style="margin-bottom:0;">
+          <label>Temps par question (secondes)</label>
+          <input type="range" id="time-limit" min="10" max="60" step="5" value="20">
+          <div class="mono" style="text-align:center; margin-top:6px; color:var(--accent-2); font-weight:700;" id="time-limit-value">20</div>
+        </div>
+      </div>
+
+      <button class="cta" id="start-game-btn">Lancer la partie</button>
+      <div class="error-msg" id="lobby-error"></div>
+    </div>
+
+    <div id="guest-waiting" style="display:none;">
+      <p class="hero-line">En attente que l'hôte lance la partie...</p>
+    </div>
+  </section>
+
+  <section id="screen-question" class="screen">
+    <div class="quiz-top">
+      <div class="mono" id="q-counter">Question 1 / 30</div>
+      <div class="timer-badge mono" id="timer-badge">20s</div>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+    <div id="question-standard">
+      <div class="question-card glass">
+        <span class="question-cat" id="q-cat">CATÉGORIE</span>
+        <div class="question-image" id="q-image" style="display:none;"></div>
+        <div class="question-text" id="q-text">...</div>
+      </div>
+      <div class="field">
+        <label>Ta réponse</label>
+        <input type="text" id="answer-input" placeholder="Tape ta réponse ici" autocomplete="off">
+      </div>
+      <button class="cta" id="submit-answer-btn">Valider ma réponse</button>
+      <div class="hint-msg" id="answer-hint" style="display:none; text-align:center;">Réponse enregistrée.</div>
+    </div>
+
+
+    <div class="answer-locked" id="answer-locked" style="display:none; margin-top:16px;">Temps écoulé — en attente...</div>
+  </section>
+
+  <section id="screen-correction" class="screen">
+    <div class="quiz-top">
+      <div class="mono" id="correction-counter">Correction — Question 1 / 30</div>
+    </div>
+
+    <div id="reveal-question-text" class="question-text-reveal"></div>
+
+    <div class="reveal-reference" id="reveal-reference" style="display:none;">
+      <span class="label">Réponse attendue</span>
+      <div id="reveal-reference-text"></div>
+    </div>
+
+    <div id="reveal-answers"></div>
+
+    <div class="correction-nav" id="host-reveal-controls" style="display:none;">
+      <button class="cta ghost" id="prev-question-btn">← Précédente</button>
+      <button class="cta" id="next-question-btn">Suivante →</button>
+    </div>
+    <div id="guest-reveal-waiting" style="display:none;">
+      <p class="hero-line">L'hôte corrige les réponses...</p>
+    </div>
+  </section>
+
+  <section id="screen-final" class="screen">
+    <div class="section-label">Classement final</div>
+    <div id="final-leaderboard"></div>
+    <button class="cta" id="replay-btn" style="margin-top:24px; display:none;">Rejouer (Garder le lobby)</button>
+    <button class="cta secondary" id="back-home-btn" style="margin-top:10px;">Retour à l'accueil</button>
+  </section>
+
+  <footer>A&M QUIZZ MULTIJOUEUR — A&M</footer>
+</div>
+
+<script src="questions.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
