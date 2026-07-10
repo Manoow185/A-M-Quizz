@@ -360,6 +360,89 @@ const QUESTION_BANK = {
     { prompt: "Quel est le nom de la galaxie qui contient notre système solaire ?", reference: "La Voie lactée" },
     { prompt: "Quelle est la capitale de la Chine ?", reference: "Pékin" },
   ],
+film: [
+    { prompt: "Devine le film avec ces indices : 🚢🧊🚪🎻", reference: "Titanic" },
+    { prompt: "Devine le film avec ces indices : 🧙‍♂️⚡👓🦉", reference: "Harry Potter" },
+    { prompt: "Devine le film avec ces indices : 🏴‍☠️🦜🚢⚔️", reference: "Pirates des Caraïbes" },
+    { prompt: "Devine le film avec ces indices : 💊🕶️🐇💻", reference: "Matrix" },
+    { prompt: "Devine le film avec ces indices : 🦖🦕🚙🌋", reference: "Jurassic Park" },
+    { prompt: "Devine le film avec ces indices : 👽🚲🌕🌌", reference: "E.T. l'extra-terrestre" },
+    { prompt: "Devine le film avec ces indices : 🦁👑🐗🐛", reference: "Le Roi Lion" },
+    { prompt: "Devine le film avec ces indices : 🕷️🕸️🏙️🦸‍♂️", reference: "Spider-Man" },
+    { prompt: "Devine le film avec ces indices : 🗡️💍🌋🧝‍♂️", reference: "Le Seigneur des Anneaux" },
+    { prompt: "Devine le film avec ces indices : 🚗🕰️⚡🔥", reference: "Retour vers le futur" },
+    { prompt: "Devine le film avec ces indices : ⛄❄️👸🦌", reference: "La Reine des Neiges" },
+    { prompt: "Devine le film avec ces indices : 🦍🏢🚁👱‍♀️", reference: "King Kong" },
+    { prompt: "Devine le film avec ces indices : 🍫🏭🎩👴", reference: "Charlie et la Chocolaterrie" },
+    { prompt: "Devine le film avec ces indices : 🧸🤠🚀🌌", reference: "Toy Story" },
+    { prompt: "Devine le film avec ces indices : 🐟🐠👨‍👦🌊", reference: "Le Monde de Nemo" },
+    { prompt: "Devine le film avec ces indices : 🦇🚙🔦🌃", reference: "Batman" },
+    { prompt: "Devine le film avec ces indices : 🥋🐼🍜🎋", reference: "Kung Fu Panda" },
+    { prompt: "Devine le film avec ces indices : 🐍🤠🕵️‍♂️🗿", reference: "Indiana Jones" },
+    { prompt: "Devine le film avec ces indices : 🥊🥩🏃‍♂️🎶", reference: "Rocky" },
+    { prompt: "Devine le film avec ces indices : 🧜‍♀️🦀🐠🎶", reference: "La Petite Sirène" },
+    { prompt: "Devine le film avec ces indices : 🤖🕶️🏍️👍", reference: "Terminator" },
+    { prompt: "Devine le film avec ces indices : 🎈🏠👴👦", reference: "Là-Haut" },
+    { prompt: "Devine le film avec ces indices : 🐧🧊💃🎶", reference: "Happy Feet" },
+    { prompt: "Devine le film avec ces indices : 🎭🌹👹🏰", reference: "La Belle et la Bête" },
+    { prompt: "Devine le film avec ces indices : 👻🚫🔫🟢", reference: "S.O.S Fantômes" }
+  ],
+
+  series: [
+    { prompt: "Devine la série avec ces indices : 🐉❄️🐺👑", reference: "Game of Thrones" },
+    { prompt: "Devine la série avec ces indices : 🚲🧇👽🔦", reference: "Stranger Things" },
+    { prompt: "Devine la série avec ces indices : 🧪⚗️🚐💰", reference: "Breaking Bad" },
+    { prompt: "Devine la série avec ces indices : 🧟‍♂️🏹🏏🏚️", reference: "The Walking Dead" },
+    { prompt: "Devine la série avec ces indices : 🏦🎭🔴💸", reference: "La Casa de Papel" },
+    { prompt: "Devine la série avec ces indices : 👨‍⚕️🦯💊🏥", reference: "Dr House" },
+    { prompt: "Devine la série avec ces indices : 🛋️☕🏢👫", reference: "Friends" },
+    { prompt: "Devine la série avec ces indices : 🛡️⚔️🛶🥶", reference: "Vikings" },
+    { prompt: "Devine la série avec ces indices : 🕵️‍♂️🇬🇧🎻🧠", reference: "Sherlock" },
+    { prompt: "Devine la série avec ces indices : 🦇👨‍✈️🚔🌃", reference: "Gotham" },
+    { prompt: "Devine la série avec ces indices : 👑🇬🇧👗☕", reference: "The Crown" },
+    { prompt: "Devine la série avec ces indices : 👨‍👨‍👦‍👦💻🤓🏢", reference: "Silicon Valley" },
+    { prompt: "Devine la série avec ces indices : 🩸🧛‍♂️🇺🇸🏫", reference: "Vampire Diaries" },
+    { prompt: "Devine la série avec ces indices : 🚔🚨🕵️‍♂️🏙️", reference: "Brooklyn Nine-Nine" },
+    { prompt: "Devine la série avec ces indices : 👦🧠🦸‍♂️⚡", reference: "The Flash" },
+    { prompt: "Devine la série avec ces indices : 👨‍👩‍👧‍👦🍩🍺📺", reference: "Les Simpson" },
+    { prompt: "Devine la série avec ces indices : 👨‍💼📉🖨️🏢", reference: "The Office" },
+    { prompt: "Devine la série avec ces indices : 🦸‍♂️🇺🇸🛡️🦅", reference: "The Boys" },
+    { prompt: "Devine la série avec ces indices : 🪞💻📱😨", reference: "Black Mirror" },
+    { prompt: "Devine la série avec ces indices : 🏥👩‍⚕️🩺💔", reference: "Grey's Anatomy" },
+    { prompt: "Devine la série avec ces indices : 😈👮‍♂️🍸🏢", reference: "Lucifer" },
+    { prompt: "Devine la série avec ces indices : 🧙‍♀️🐈‍⬛🔮🧹", reference: "Sabrina l'apprentie sorcière" },
+    { prompt: "Devine la série avec ces indices : 🔫👔🐎🎩", reference: "Peaky Blinders" },
+    { prompt: "Devine la série avec ces indices : 🧑‍🦲👊💥🦸‍♂️", reference: "One Punch Man" },
+    { prompt: "Devine la série avec ces indices : 🧑‍🚀🌌🛸⚔️", reference: "The Mandalorian" }
+  ],
+
+  musique: [
+    { prompt: "Complète les paroles : 'Allons enfants de la Patrie, Le jour de gloire est...'", reference: "Arrivé" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Is this the real life? Is this just fantasy?'", reference: "Bohemian Rhapsody (Queen)" },
+    { prompt: "Complète les paroles (Stromae) : 'Où t'es, papa...'", reference: "Où t'es" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Je t'aime, à la folie, comme un fou, comme un soldat...'", reference: "Je t'aime (Lara Fabian)" },
+    { prompt: "Complète les paroles : 'Sous le soleil des tropiques, l'amour se raconte en...'", reference: "Musique" },
+    { prompt: "Complète les paroles (Céline Dion) : 'Near, far, wherever you...'", reference: "Are" },
+    { prompt: "De quelle chanson viennent ces paroles : 'I'm a survivor, I'm not gonna give up'", reference: "Survivor (Destiny's Child)" },
+    { prompt: "Complète les paroles : 'Emmenez-moi au bout de la...'", reference: "Terre (Charles Aznavour)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Billie Jean is not my lover'", reference: "Billie Jean (Michael Jackson)" },
+    { prompt: "Complète les paroles : 'Et tu chantes, chantes, chantes ce refrain qui te...'", reference: "Plaît (Début de soirée)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Wake me up before you go-go'", reference: "Wake Me Up Before You Go-Go (Wham!)" },
+    { prompt: "Complète les paroles : 'All you need is...'", reference: "Love (The Beatles)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'I will always love you'", reference: "I Will Always Love You (Whitney Houston)" },
+    { prompt: "Complète les paroles (Ed Sheeran) : 'I'm in love with the shape of...'", reference: "You" },
+    { prompt: "Complète les paroles : 'Laissez-moi danser, laissez-moi, laissez-moi...'", reference: "Danser (Dalida)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Hello from the other side'", reference: "Hello (Adele)" },
+    { prompt: "Complète les paroles : 'Il jouait du piano...'", reference: "Debout (France Gall)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Don't stop believin', hold on to that feelin''", reference: "Don't Stop Believin' (Journey)" },
+    { prompt: "Complète les paroles : 'Les démons de minuit, m'entraînent jusqu'au bout de la...'", reference: "Nuit (Images)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Oops!... I Did It Again'", reference: "Oops!... I Did It Again (Britney Spears)" },
+    { prompt: "Complète les paroles : 'Voyage, voyage, plus loin que la...'", reference: "Nuit et le jour (Desireless)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'We are the champions, my friends'", reference: "We Are the Champions (Queen)" },
+    { prompt: "Complète les paroles : 'La bohème, la bohème, ça voulait dire on est...'", reference: "Heureux (Charles Aznavour)" },
+    { prompt: "De quelle chanson viennent ces paroles : 'Somebody once told me the world is gonna roll me'", reference: "All Star (Smash Mouth)" },
+    { prompt: "Complète les paroles : 'Femme libérée, c'est pas si facile à...'", reference: "Trouver (Cookie Dingler)" }
+  ]
 };
 
 const CATEGORY_LABELS = {
@@ -371,8 +454,10 @@ const CATEGORY_LABELS = {
   francais: "Français",
   marques: "Marques (indices)",
   culture_generale: "Culture générale",
+  film: "Films (emojis)",
+  series: "Séries (emojis)",
+  musique: "Musique (Paroles)"
 };
 
-// Rend la banque accessible en tant que module (utilisée par app.js)
 if (typeof module !== 'undefined') { module.exports = QUESTION_BANK; }
 if (typeof window !== 'undefined') { window.QUESTION_BANK = QUESTION_BANK; window.CATEGORY_LABELS = CATEGORY_LABELS; }
